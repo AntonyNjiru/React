@@ -1,14 +1,10 @@
+import React, { useState } from 'react';
+import { selectCampsiteById } from './campsite';
 const CampsitesDirectoryPage = () => {
-    let selectedCampsite = selectRandomCampsite();
-
-    const toggleCampsite = () => {
-        selectedCampsite = selectRandomCampsite();
-        console.log(selectedCampsite);
-    };
-
+    const [selectedCampsite, toggleCampsite ] = useState(selectRandomCampsite())
     return (
         <Container>
-            <Button onClick={() => toggleCampsite()}>
+           <Button onClick={() => toggleCampsite(selectRandomCampsite())}>
                 Select Random Campsite
             </Button>
             <Row>
