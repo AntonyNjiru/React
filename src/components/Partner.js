@@ -10,8 +10,7 @@ export const Partner = ({partner}) => {
                 <h5 className='fw-bold'>{name}</h5>
                     {description}
                 </div>
-
-            </>
+           </>
          ); 
     }
     return null;
